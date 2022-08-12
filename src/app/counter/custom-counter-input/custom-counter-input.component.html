@@ -1,0 +1,6 @@
+<h4>{{name$ | async}}</h4>
+<div class="input-group justify-content-center my-3">
+  <input type="text" placeholder="Enter counter" [(ngModel)]="value">
+  <button class="btn btn-primary" (click)="onAdd()">Add to counter</button>
+</div>
+<button class="btn btn-info" (click)="onChange()">Change name</button>
