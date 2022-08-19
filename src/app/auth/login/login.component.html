@@ -5,7 +5,7 @@
       <hr>
       <div class="mb-3">
         <label>Email</label>
-        <input class="form-control" type="text" formControlName="email">
+        <input class="form-control" type="text" formControlName="email" placeholder="d@mail.ru">
         <div class="text-danger" *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid">
           <div *ngIf="loginForm.get('email').errors['required']">Email is required!</div>
           <div *ngIf="loginForm.get('email').errors['email']">Email is invalid!</div>
@@ -13,7 +13,7 @@
       </div>
       <div class="mb-3">
         <label>Password</label>
-        <input class="form-control" type="text" formControlName="password">
+        <input class="form-control" type="text" formControlName="password" placeholder="123123">
         <div class="text-danger" *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
           <div *ngIf="loginForm.get('password').errors['required']">Password is required!</div>
           <div *ngIf="loginForm.get('password').errors['minlength']">Password should be minimum 6 characters!</div>
