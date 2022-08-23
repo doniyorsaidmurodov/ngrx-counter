@@ -5,5 +5,5 @@ export interface AuthState {
 }
 
 export const initialState: AuthState = {
-  user: null
+  user: null,
 }
