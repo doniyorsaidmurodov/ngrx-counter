@@ -11,9 +11,18 @@ export const loginStart = createAction(
 
 export const loginSuccess = createAction(
   '[auth page] login success',
-  props<{user: User}>()
+  props<{ user: User }>()
 )
 
-export const loginFail = createAction(
-  '[auth page] login fail'
+export const signupStart = createAction(
+  '[auth page] signup start',
+  props<{
+    email: string;
+    password: string
+  }>()
+)
+
+export const signupSuccess = createAction(
+  '[auth page] signup success',
+  props<{ user: User }>()
 )

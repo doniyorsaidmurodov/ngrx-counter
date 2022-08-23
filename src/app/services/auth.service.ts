@@ -21,6 +21,14 @@ export class AuthService {
     )
   }
 
+  signUp(email: string, password: string): Observable<AuthResponseData> {
+    return this.http.post<AuthResponseData>(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.API_KEY}`,
+      {
+        email, password, returnSecureToken: true
+      }
+    )
+  }
+
   formatUser(data: AuthResponseData) {
     const expirationDate = new Date(new Date().getTime() + +data.expiresIn * 1000);
     return new User(data.email, data.idToken, data.localId, expirationDate);
@@ -34,6 +42,8 @@ export class AuthService {
         return 'Password not found!'
       case 'USER_DISABLED':
         return 'User not found!'
+      case 'EMAIL_EXISTS':
+        return 'Email already exists!'
       default:
         return 'Unknown error occurred. Please try again later'
     }

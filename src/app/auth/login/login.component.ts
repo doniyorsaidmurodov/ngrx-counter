@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginSubmit() {
+    if (this.loginForm.invalid) {
+      return;
+    }
+
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
 
