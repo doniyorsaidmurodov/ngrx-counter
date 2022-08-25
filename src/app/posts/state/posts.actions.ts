@@ -8,6 +8,13 @@ export const addPost = createAction(
   }>()
 );
 
+export const addPostSuccess = createAction(
+  '[posts page] add post success',
+  props<{
+    post: Post
+  }>()
+);
+
 export const updatePost = createAction(
   '[posts page] update post',
   props<{
@@ -18,6 +25,15 @@ export const updatePost = createAction(
 export const deletePost = createAction(
   '[posts page] delete post',
   props<{
-    id: number
+    id: string
   }>()
 );
+
+export const loadPosts = createAction(
+  '[posts page] load posts'
+)
+
+export const loadPostsSuccess = createAction(
+  '[posts page] load posts success',
+  props<{posts: Post[]}>()
+)
