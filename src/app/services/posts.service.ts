@@ -28,4 +28,13 @@ export class PostsService {
   addPost(post: Post): Observable<{name: string}> {
     return this.http.post<{name: string}>('https://todos-81b5e-default-rtdb.firebaseio.com/posts.json', post);
   }
+
+  updatePost(post: Post) {
+    const postData = {[post.id]: {title: post.title, description: post.description}};
+    return this.http.patch('https://todos-81b5e-default-rtdb.firebaseio.com/posts.json', postData);
+  }
+
+  deletePost(id: string) {
+    return this.http.delete(`https://todos-81b5e-default-rtdb.firebaseio.com/posts/${id}.json`);
+  }
 }

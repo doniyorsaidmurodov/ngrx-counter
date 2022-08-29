@@ -71,7 +71,7 @@ export class AuthService {
     this.timeoutInterval = setTimeout(() => {
       this.store.dispatch(autoLogout());
       //logout func or get the refresh token
-    }, timeInterval)
+    }, timeInterval);
   }
 
   getUserFromLocalStorage() {
