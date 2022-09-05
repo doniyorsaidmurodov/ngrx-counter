@@ -10,4 +10,8 @@ export class User {
   get getExpirationDate() {
     return this.expirationDate;
   }
+
+  get userToken() {
+    return this.token;
+  }
 }

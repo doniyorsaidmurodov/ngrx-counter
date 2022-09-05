@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {LoginComponent} from "./login/login.component";
 import {RouterModule, Routes} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {EffectsModule} from "@ngrx/effects";
-import {AuthEffects} from "./state/auth.effects";
-import { SignupComponent } from './signup/signup.component';
+import {SignupComponent} from './signup/signup.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -22,4 +21,5 @@ const routes: Routes = [
     EffectsModule.forFeature([]),
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+}

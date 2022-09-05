@@ -10,10 +10,11 @@ import {HeaderComponent} from './shared/components/header/header.component';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {EffectsModule} from "@ngrx/effects";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {LoadingSpinnerComponent} from './shared/components/loading-spinner/loading-spinner.component';
 import {appReducer} from "./store/app.state";
 import {AuthEffects} from "./auth/state/auth.effects";
+import {AuthInterceptor} from "./services/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import {AuthEffects} from "./auth/state/auth.effects";
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
