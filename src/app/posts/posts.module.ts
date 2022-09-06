@@ -10,6 +10,7 @@ import {postsReducer} from "./state/posts.reducer";
 import {POSTS_STATE_NAME} from "./state/posts.selector";
 import {EffectsModule} from "@ngrx/effects";
 import {PostsEffects} from "./state/posts.effects";
+import { SinglePostComponent } from './single-post/single-post.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
   declarations: [
     AddPostComponent,
     EditPostComponent,
-    PostsListComponent
+    PostsListComponent,
+    SinglePostComponent
   ],
   imports: [
     CommonModule,

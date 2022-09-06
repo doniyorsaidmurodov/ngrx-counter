@@ -68,10 +68,11 @@ export class AuthService {
     const expirationDate = user.getExpirationDate.getTime();
     const timeInterval = todayDate - expirationDate;
 
-    this.timeoutInterval = setTimeout(() => {
-      this.store.dispatch(autoLogout());
-      //logout func or get the refresh token
-    }, timeInterval);
+    // this.timeoutInterval = setTimeout(() => {
+    //   debugger
+    //   this.store.dispatch(autoLogout());
+    //   //logout func or get the refresh token
+    // }, timeInterval);
   }
 
   getUserFromLocalStorage() {

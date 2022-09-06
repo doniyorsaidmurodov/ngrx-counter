@@ -17,7 +17,6 @@ export class PostsService {
         map(data => {
           const posts: Post[] = [];
           for (const postsKey in data) {
-            console.log(typeof postsKey)
             posts.push({...data[postsKey], id: postsKey})
           }
           return posts;
@@ -36,5 +35,9 @@ export class PostsService {
 
   deletePost(id: string) {
     return this.http.delete(`https://todos-81b5e-default-rtdb.firebaseio.com/posts/${id}.json`);
+  }
+
+  getPostById(id: string): Observable<Post> {
+    return this.http.get<Post>(`https://todos-81b5e-default-rtdb.firebaseio.com/posts/${id}.json`);
   }
 }
