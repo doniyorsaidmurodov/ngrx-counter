@@ -1335,6 +1335,13 @@
   dependencies:
     "tslib" "^2.0.0"
 
+"@ngrx/entity@^14.1.0":
+  "integrity" "sha512-UG1T7jjJCSG10zUSFHpWvxqNujHNPHzX1YoFwVFqNaAxijlK3UH1ic3hl1deg4R9HDuGYS7thHpd2H38G53OhA=="
+  "resolved" "https://registry.npmjs.org/@ngrx/entity/-/entity-14.1.0.tgz"
+  "version" "14.1.0"
+  dependencies:
+    "tslib" "^2.0.0"
+
 "@ngrx/router-store@^14.1.0":
   "integrity" "sha512-UwBe4Hp2iVzdfvwCcnpG3QGu6Ss32yhLA6sishxIH0u7Dzu/bBvvf0NGhSvdDXWPOvEvqw8dZvesGsWMWcLOqQ=="
   "resolved" "https://registry.npmjs.org/@ngrx/router-store/-/router-store-14.1.0.tgz"
