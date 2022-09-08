@@ -22,7 +22,7 @@
           <td>{{post.description}}</td>
           <td>
             <button class="btn btn-primary" [routerLink]="['edit', post.id]">Edit</button>
-            <button class="btn btn-outline-primary ms-2" [routerLink]="['details', post.id]">Details</button>
+            <button class="btn btn-outline-primary" [routerLink]="['details', post.id]">Details</button>
             <button class="btn btn-danger ms-2" (click)="onDeletePost(post.id)">Delete</button>
           </td>
         </tr>

@@ -43,5 +43,3 @@ export const autoLogin = createAction(
 export const autoLogout = createAction(
   LOGOUT_ACTION
 )
-
-export const dummyAction = createAction('dummy action');
