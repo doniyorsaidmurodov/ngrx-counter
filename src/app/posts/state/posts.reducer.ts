@@ -13,7 +13,7 @@ import {
 const _postsReducer = createReducer(
   initialState,
   on(addPostSuccess, (state, action) => {
-    return postsAdapter.addOne(action.post, {...state, count: state.count + 1})
+    return postsAdapter.addOne(action.post, state)
     // let post = {...action.post};
     //
     // return {
@@ -40,7 +40,7 @@ const _postsReducer = createReducer(
     // }
   }),
   on(loadPostsSuccess, (state, action) => {
-    return postsAdapter.setAll(action.posts, {...state, count: state.count + 1})
+    return postsAdapter.setAll(action.posts, state)
     // return {
     //   ...state,
     //   posts: action.posts
